@@ -12,17 +12,21 @@ export default function Navigation({
   onNavigate,
 }: NavigationProps) {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-10">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-8">
         <button
           type="button"
           onClick={() => onNavigate("hero")}
           className="font-[family-name:var(--font-syne)] text-lg font-bold tracking-tight transition-opacity hover:opacity-70"
         >
-          Maya<span className="text-accent">.</span>
+          <img
+            src="images/logo.png"
+            alt="Logo"
+            className="lg:h-10 h-6 w-auto"
+          />
         </button>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-8 md:flex lg:pr-28">
           {sections.map((item) => (
             <li key={item.id}>
               <button
